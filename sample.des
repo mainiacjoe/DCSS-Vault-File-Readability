@@ -1,0 +1,201 @@
+NAME:    dpeg_arrival_triangle_fractal
+TAGS:    arrival no_monster_gen no_rotate
+WEIGHT:  2
+ORIENT:  float
+MAP
+xxxxxxxxxxxxxxxxxxxxxxx@x
+xxxxx.xxxxx.xxxxxxxxxxx.x
+xxxx..xxxx..xxxxxxxxxx..x
+xxx...xxx...xxxxxxxxx...x
+xx..{.xx....xxxxxxxx....x
+x.....+.....xxxxxxx.....x
+xxxxx+xxxxx+xxxxxx...x..x
+xxxxx.xxxxx.xxxxx...xx..x
+xxxx..xxxx..xxxx...xxx..x
+xxx...xxx...xxx...xxxx..x
+xx....xx..T.xx...xxxxx..x
+x.....+.....+...........x
+xxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+############################################################################
+
+# A spiral sometimes made entirely of glass
+NAME:    zelgadis_glass_arrival_small
+TAGS:    arrival no_monster_gen
+ORIENT:  float
+SHUFFLE: mvvcccxxxx
+MAP
+...mmmmmmmm...
+..............
+.mm.mmmmmm.mm.
+.mm.m....m.mm.
+.mm.m.mm.m.mm.
+.mm.m..m.m.mm.
+.mm.m.{m.m.mm.
+.mm.mmmm.m.mm.
+.........m.mm.
+...mmmmmmm....
+ENDMAP
+
+############################################################################
+
+# Dragon's Lair, for generous values of Dragon
+NAME:    erik_lair_dragon
+TAGS:    lair_entry no_rotate
+ORIENT:  float
+MONS:    steam dragon / acid dragon / swamp drake
+MONS:    basilisk / wyvern / komodo dragon
+NSUBST:  2 = 3=2 / 3=2. / .
+SHUFFLE: %!*O
+SUBST:   z = .xc, ! = %
+KFEAT:   O = enter_lair
+MAP
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxzxxxzxzxxzx.2xxzxxxzx*zxxxz.2.xxxx
+xxxxxxxxxxxxxxx.2.......zxx.x.zxxxz.zzxxxxzx.zxxx
+xxxxxxxxxxxxxz....xxx...2....zzzzzz..zzzzx..%cccc
+xxzxxzzzxxxxx..xxzzxxzz..........z...zzz..zzc+.zc
+@......xxx.2.xxzxxxxxxzxzxzz.......1...2.x.ccc.zc
+xxxzxxx...xxxxxxxxxxxxzxxxx.zz.2...z......zccc$cc
+xxxxxxzxxxzxxxxxxxxxxxx....xxzz...z....zz..zzcczc
+xxxxxxxxxxxxxxxxxxxxxzz2xxxzxxzzzz..zzz2zz.2Ozccc
+xxxxxxxxxxxxxxxxxxxxxz!zxxxxxxxxxx.xxxzxxxzxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ENDMAP
+
+NAME:    nicolae_temple_great_sept
+PLACE:   Temple
+ORIENT:  encompass
+WEIGHT:  5
+# Sadly, console doesn't have colors for orange and indigo,
+# so brown and cyan will have to do.
+KFEAT:   roygbiv = n
+KFEAT:   ' = .
+SHUFFLE: roygbiv / vroygbi / ivroygb / bivroyg / gbivroy / ygbivro / oygbivr
+SUBST:   T = 't
+FTILE:   . = floor_hall, t' = floor_grass, !{B = floor_limestone
+COLOUR:  r = red, o = brown, y = yellow, g = green, b = blue, i = cyan, \
+         v = magenta, ' = green, . = blue, ! = lightgrey
+TILE:    r = dngn_transparent_stone_red, o = dngn_transparent_stone_brown, \
+         y = dngn_transparent_stone_yellow, g = dngn_transparent_stone_green, \
+         b = dngn_transparent_stone_blue, i = dngn_transparent_stone, \
+         v = dngn_transparent_stone_magenta
+KPROP:   't = no_tele_into
+MAP
+ttttttttttttttttttttttttttttttttttttttttttttt
+ttttttttttttttttttttttttttttttttttttttttttttt
+tttttttttttttttTTTTTTTTTTTTTTTttttttttttttttt
+ttttttttttttttT'''''''''''''''Ttttttttttttttt
+tttttttttttttT'''''''''''''''''Tttttttttttttt
+ttttttttttttT'''''''''''''''''''Ttttttttttttt
+tttttttTTTTTT'''''''''''''''''''TTTTTTttttttt
+ttttttT''''''''''''rrrrrrr''''''''''''Ttttttt
+tttttT''''''''''''cc.....cc''''''''''''Tttttt
+ttttT''''''''''''cc.......cc''''''''''''Ttttt
+ttttT''''''''''''c...!!!...c''''''''''''Ttttt
+ttttT''''''vvccccc..!!!!!..cccccoo''''''Ttttt
+ttttT'''''vv........!B!B!........oo'''''Ttttt
+ttttT''''vv.........!!!!!.........oo''''Ttttt
+ttttT''''v....!!!....!!!....!!!....o''''Ttttt
+ttttT''''c...!!B!...........!B!!...c''''Ttttt
+tttT'''''c..!!!!!...........!!!!!..c'''''Tttt
+ttT''''''c..!B!!.............!!B!..c''''''Ttt
+ttT''''''c..!!!...............!!!..c''''''Ttt
+ttT''''''cc.......................cc''''''Ttt
+ttT'''''cc...........!!!...........cc'''''Ttt
+ttT''''cc...........!!!!!...........cc''''Ttt
+ttT''''i..!!!.......!!{!!.......!!!..y''''Ttt
+ttT''''i..!B!!......!!!!!......!!B!..y''''Ttt
+ttT''''i..!!!!!......!!!......!!!!!..y''''Ttt
+ttT''''i...!!B!...............!B!!...y''''Ttt
+ttT''''i....!!!...............!!!....y''''Ttt
+ttT''''ii...........................yy''''Ttt
+ttT'''''cc.........................cc'''''Ttt
+ttT''''''ccccc...!!!.....!!!...ccccc''''''Ttt
+ttT''''''''''c..!!!!!...!!!!!..c''''''''''Ttt
+ttT''''''''''c..!B!B!...!B!B!..c''''''''''Ttt
+tttT'''''''''c..!!!!!...!!!!!..c'''''''''Tttt
+ttttT''''''''c...!!!.....!!!...c''''''''Ttttt
+tttttTTTT''''bb.......c.......gg''''TTTTttttt
+ttttttttT'''''bb.....ccc.....gg'''''Ttttttttt
+ttttttttT''''''bbbcccc'ccccggg''''''Ttttttttt
+ttttttttT'''''''''''''''''''''''''''Ttttttttt
+ttttttttT'''''''''''''''''''''''''''Ttttttttt
+tttttttttT'''''''''''''''''''''''''Tttttttttt
+ttttttttttT'''''''''''''''''''''''Ttttttttttt
+tttttttttttTTTTTTTTTTTTTTTTTTTTTTTttttttttttt
+ttttttttttttttttttttttttttttttttttttttttttttt
+ttttttttttttttttttttttttttttttttttttttttttttt
+ENDMAP
+
+NAME:   bailey_axe_minmay_hex_keep
+ORIENT: encompass
+TAGS:   bailey_axe no_item_gen no_monster_gen
+# Loot consists of 8 good potions and scrolls in the last outer room, with a
+# lot of gold and especially good items in the (very dangerous) center room.
+#
+# I believe that loot is a bit much, but other baileys suffer from that as
+# well... added the warlord in an attempt to make it more even.  --dpeg
+ITEM:   potion of curing / potion of heal wounds / potion of resistance w:5 / \
+        potion of might w:5 / potion of brilliance w:5 / \
+        potion of magic w:5 / potion of haste w:5 / \
+        scroll of teleportation / scroll of blinking / scroll of identify / \
+        scroll of enchant weapon w:5 / scroll of enchant armour w:5
+ITEM:   potion of experience q:1 / scroll of acquirement q:1
+: easy_axe_fighter(_G)
+: hard_axe_fighter(_G)
+MONS:   orc warlord
+: bailey_setup(_G)
+SUBST:  I = t.
+MAP
+ttttttttttttttttttttttttttttttttttttt
+ttttttttttttttttttttttttttttttttttttt
+tttttttttttttttcccccccttttttttttttttt
+ttttttttttttttccdd<ddcctttttttttttttt
+ttttttttttttttcdd...ddctttttttttttttt
+tttttttttttttcc.......ccttttttttttttt
+tttttttttttttc.........cttttttttttttt
+ttttttttttttcc.1.....1.cctttttttttttt
+ttttttccccccc2...1T1...2ccccccctttttt
+tttttcc1...1cc.1.....1.cc1...1ccttttt
+tttttc.......+....2....+.......cttttt
+ttttcc.......cc.1...1.cc.......cctttt
+ttttc.........c.......c.........ctttt
+tttcc...1.1...ccGG.GGcc...1.1...ccttt
+tttc1....T....1ccc+ccc1....T....1cttt
+tttcc...1.1...ccc...ccc...1.1...ccttt
+ttttc.........c1.....1c.........ctttt
+ttttcc.......cc..1.1..cc.......cctttt
+tttttc.......c2.......2c.......cttttt
+tttttcc1...1cc..1...1..cc1...1ccttttt
+ttttttcc+cccc2....3....2cccc+cctttttt
+tttttcc.....cc..1...1..cc.....ccttttt
+tttttc1.....1c2.......2c1.....1cttttt
+ttttcc.......cc.......cc.......cctttt
+ttttc1.......1c|$$$$$|c1.......1ctttt
+tttcc.........cc$e$e$cc.........ccttt
+tttc1....T....1ccccccc1....T....1cttt
+tttcc.........cc1.1.1cc.........ccttt
+ttttc1.......1c.......c1.......1ctttt
+ttttcc.......cc1.....1cc.......cctttt
+tttttc1......+.........+......1cttttt
+tttttcc.....cc.........cc.....ccttttt
+ttttttccccccc.....T.....ccccccctttttt
+ttttttttttttcc.........cctttttttttttt
+tttttttttttttc.........cttttttttttttt
+tttttttttttttcc.......ccttttttttttttt
+ttttttttttttttc.......ctttttttttttttt
+ttttttttttttttcc.....cctttttttttttttt
+tttttttttttttttcc+++ccttttttttttttttt
+ttttttttttttttI.......Itttttttttttttt
+ttttttttttttttI.......Itttttttttttttt
+tttttttttttttI....<....Ittttttttttttt
+tttttttttttttI.........Ittttttttttttt
+tttttttttttttI....A....Ittttttttttttt
+tttttttttttttI.........Ittttttttttttt
+ttttttttttttttII.....IItttttttttttttt
+ttttttttttttttttIIIIItttttttttttttttt
+ttttttttttttttttttttttttttttttttttttt
+ttttttttttttttttttttttttttttttttttttt
+ENDMAP
