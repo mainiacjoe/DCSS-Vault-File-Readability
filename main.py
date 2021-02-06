@@ -16,7 +16,7 @@ widen(filename,spaceChar=' ')
     filename adds the prefix 'widened-' to the given filename, overwriting 
     that file if it already exists.
 
-    spaceChar defaults to the spacebat character.  Uncode U2000 through U200A
+    spaceChar defaults to the spacebar character.  Uncode U2000 through U200A
     are spaces of varying widths.  spaceChar can be a string of any length, 
     despite its name.  For my own text editor and its font, the ideal spaceChar 
     is 'u\2004\u2004\u2006' which equals 5/6 em.
